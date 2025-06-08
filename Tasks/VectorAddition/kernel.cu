@@ -57,8 +57,10 @@ int main(void)
 	CudaCheckError(cudaMemcpy(dB, hB, VECTOR_SIZE * sizeof(int), cudaMemcpyHostToDevice));
 
 	add<<<BLOCK_NUM, THREADS_PER_BLOCK>>>(dA, dB, dResult, VECTOR_SIZE);
-	CudaCheckError(cudaMemcpy(hResult, dResult, VECTOR_SIZE * sizeof(int), cudaMemcpyDeviceToHost));
+	CudaCheckError(cudaGetLastError());
+	CudaCheckError(cudaDeviceSynchronize());
 
+	CudaCheckError(cudaMemcpy(hResult, dResult, VECTOR_SIZE * sizeof(int), cudaMemcpyDeviceToHost));
 	puts(checkResult(hA, hB, hResult, VECTOR_SIZE) ? "Result ok" : "Result not ok");
 
 exit:

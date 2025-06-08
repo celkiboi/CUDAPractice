@@ -74,9 +74,12 @@ int main(void)
 	DEBUG_ARRAY_PRINT(hIn, VECTOR_SIZE);
 
 	CudaCheckError(cudaMemcpy(dIn, hIn, VECTOR_SIZE * sizeof(int), cudaMemcpyHostToDevice));
-	performStencil<<<BLOCK_NUM, THREADS_PER_BLOCK>>>(dIn, dOut, VECTOR_SIZE);
-	CudaCheckError(cudaMemcpy(hOut, dOut, VECTOR_SIZE * sizeof(int), cudaMemcpyDeviceToHost));
 
+	performStencil<<<BLOCK_NUM, THREADS_PER_BLOCK>>>(dIn, dOut, VECTOR_SIZE);
+	CudaCheckError(cudaGetLastError());
+	CudaCheckError(cudaDeviceSynchronize());
+
+	CudaCheckError(cudaMemcpy(hOut, dOut, VECTOR_SIZE * sizeof(int), cudaMemcpyDeviceToHost));
 	DEBUG_ARRAY_PRINT(hOut, VECTOR_SIZE);
 
 exit:
