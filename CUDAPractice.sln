@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35728.132 d17.12
+VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VectorAddition", "Tasks\VectorAddition\VectorAddition.vcxproj", "{E0BBB848-5B7F-4D56-903C-D814C1AB23C2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1DStencil", "Tasks\1DStencil\1DStencil.vcxproj", "{1D81AA68-0269-4B0E-B27F-875B864D495B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixElementSum", "MatrixElementSum\MatrixElementSum.vcxproj", "{7CC29E48-42A0-4E11-9852-9BE45C281A87}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixSum", "Tasks\MatrixSum\MatrixSum.vcxproj", "{0A17D193-0F61-48AD-8726-8C21E2F177A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{1D81AA68-0269-4B0E-B27F-875B864D495B}.Debug|x64.Build.0 = Debug|x64
 		{1D81AA68-0269-4B0E-B27F-875B864D495B}.Release|x64.ActiveCfg = Release|x64
 		{1D81AA68-0269-4B0E-B27F-875B864D495B}.Release|x64.Build.0 = Release|x64
+		{7CC29E48-42A0-4E11-9852-9BE45C281A87}.Debug|x64.ActiveCfg = Debug|x64
+		{7CC29E48-42A0-4E11-9852-9BE45C281A87}.Debug|x64.Build.0 = Debug|x64
+		{7CC29E48-42A0-4E11-9852-9BE45C281A87}.Release|x64.ActiveCfg = Release|x64
+		{7CC29E48-42A0-4E11-9852-9BE45C281A87}.Release|x64.Build.0 = Release|x64
+		{0A17D193-0F61-48AD-8726-8C21E2F177A7}.Debug|x64.ActiveCfg = Debug|x64
+		{0A17D193-0F61-48AD-8726-8C21E2F177A7}.Debug|x64.Build.0 = Debug|x64
+		{0A17D193-0F61-48AD-8726-8C21E2F177A7}.Release|x64.ActiveCfg = Release|x64
+		{0A17D193-0F61-48AD-8726-8C21E2F177A7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
