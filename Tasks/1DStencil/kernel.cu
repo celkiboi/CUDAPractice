@@ -8,7 +8,7 @@
 #define THREADS_PER_BLOCK 256
 #define STENCIL_RADIUS 10
 
-#define CEIL(A, B) (A + B - 1) / B
+#define CEIL(A, B) ((A) + (B) - 1) / (B)
 
 #define BLOCK_NUM CEIL(VECTOR_SIZE, THREADS_PER_BLOCK)
 
